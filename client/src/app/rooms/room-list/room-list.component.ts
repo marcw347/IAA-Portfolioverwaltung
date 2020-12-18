@@ -13,6 +13,11 @@ export class RoomListComponent {
 
     @Output()
     delete = new EventEmitter<Room>();
+    @Output()
+    add = new EventEmitter<void>()
+    @Output()
+    edit = new EventEmitter<Room>()
+
 
     selectedRoom?: Room;
 
@@ -27,4 +32,11 @@ export class RoomListComponent {
         this.delete.emit(this.selectedRoom);
     }
 
+    onEdit() {
+        this.edit.emit(this.selectedRoom)
+    }
+
+    onAdd() {
+        this.add.emit();
+    }
 }

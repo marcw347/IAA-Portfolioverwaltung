@@ -5,7 +5,7 @@
         <th>Seats</th>
         <th>Projector present?</th>
     </tr>
-    <tr *ngFor="let room of rooms" [class.selected]="room === selectedRoom" (click)="onSelect(room)">
+    <tr (click)="onSelect(room)" *ngFor="let room of rooms" [class.selected]="room === selectedRoom">
         <td>{{room.building}}</td>
         <td>{{room.roomNumber}}</td>
         <td>{{room.seats}}</td>
@@ -14,3 +14,5 @@
 </table>
 
 <button (click)="onDelete()" [disabled]="!selectedRoom">Delete</button>
+<button (click)="onEdit()" [disabled]="!selectedRoom">Edit</button>
+<button (click)="onAdd()">Add</button>

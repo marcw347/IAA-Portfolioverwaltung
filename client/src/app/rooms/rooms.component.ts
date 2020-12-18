@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Room} from "./shared/room";
 import {RoomService} from "./shared/room.service";
 
@@ -9,9 +9,12 @@ import {RoomService} from "./shared/room.service";
 })
 export class RoomsComponent implements OnInit {
 
-    rooms: Room[];
 
-    constructor(private roomService: RoomService) {}
+    rooms: Room[];
+    currentRoom?: Room;
+
+    constructor(private roomService: RoomService) {
+    }
 
     ngOnInit() {
         this.reloadList();
@@ -19,9 +22,27 @@ export class RoomsComponent implements OnInit {
 
     private reloadList() {
         this.roomService.listAllRooms().subscribe(rooms => this.rooms = rooms);
+        this.currentRoom = undefined;
     }
 
     onDeleteRoom(roomToBeDeleted: Room) {
-        this.roomService.deleteRoom(roomToBeDeleted).subscribe(_ => this.reloadList());
+        this.roomService.deleteRoom(roomToBeDeleted).subscribe( _ => this.reloadList());
     }
+
+    onAddRoom() {
+        this.currentRoom = new Room();
+    }
+
+    onEditRoom(room: Room) {
+        this.currentRoom = room;
+    }
+
+    onSave(roomToBeSaved: Room) {
+        this.roomService.saveRoom(roomToBeSaved).subscribe(_ => this.reloadList());
+    }
+
+    onCancel() {
+        this.reloadList();
+    }
+
 }
