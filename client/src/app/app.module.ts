@@ -15,8 +15,8 @@ import {BugTableComponent} from "./bug-table/bug-table.component";
 import {MenuComponent} from "./menu/menu.component"
 import {BugDetailledViewComponent} from "./bug-detailled-view/bug-detailled-view.component";
 import {AddCommentComponent} from "./add-comment/add-comment.component";
-
-
+import {CommentListComponent} from "./comment-list/comment-list.component";
+import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 
 
 @NgModule({
@@ -33,6 +33,8 @@ import {AddCommentComponent} from "./add-comment/add-comment.component";
         MenuComponent,
         BugDetailledViewComponent,
         AddCommentComponent,
+        CommentListComponent,
+        LogOffDialogComponent,
 
     ],
     imports: [
