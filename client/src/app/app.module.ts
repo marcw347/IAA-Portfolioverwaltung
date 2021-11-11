@@ -8,6 +8,16 @@ import {HttpClientModule} from '@angular/common/http';
 import { RoomListComponent } from './rooms/room-list/room-list.component';
 import { RoomsFormComponent } from './rooms/rooms-form/rooms-form.component';
 import { MinValidatorDirective } from './rooms/shared/min-validator.directive';
+import { RegistrationDialogComponent} from "./registration-dialog/registration-dialog.component";
+import {CreateIssueComponent} from "./create-issue/create-issue.component";
+import {LogInDialogComponent} from "./log-in-dialog/log-in-dialog.component";
+import {BugTableComponent} from "./bug-table/bug-table.component";
+import {MenuComponent} from "./menu/menu.component"
+import {BugDetailledViewComponent} from "./bug-detailled-view/bug-detailled-view.component";
+import {AddCommentComponent} from "./add-comment/add-comment.component";
+
+
+
 
 @NgModule({
     declarations: [
@@ -16,6 +26,14 @@ import { MinValidatorDirective } from './rooms/shared/min-validator.directive';
         RoomListComponent,
         RoomsFormComponent,
         MinValidatorDirective,
+        RegistrationDialogComponent,
+        CreateIssueComponent,
+        LogInDialogComponent,
+        BugTableComponent,
+        MenuComponent,
+        BugDetailledViewComponent,
+        AddCommentComponent,
+
     ],
     imports: [
         BrowserModule,
