@@ -1,4 +1,4 @@
-package de.nordakademie.iaa.roommgmt.rest;
+package de.nordakademie.iaa.bugtracker.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -1,6 +1,6 @@
-package de.nordakademie.iaa.roommgmt.rest;
+package de.nordakademie.iaa.bugtracker.rest;
 
-import de.nordakademie.iaa.roommgmt.model.Room;
+import de.nordakademie.iaa.bugtracker.model.Room;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.*;

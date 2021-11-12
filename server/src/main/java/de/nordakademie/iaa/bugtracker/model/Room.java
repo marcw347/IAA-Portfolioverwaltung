@@ -1,4 +1,4 @@
-package de.nordakademie.iaa.roommgmt.model;
+package de.nordakademie.iaa.bugtracker.model;
 
 import java.util.Objects;
 
