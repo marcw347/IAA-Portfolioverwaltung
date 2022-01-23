@@ -14,6 +14,7 @@ import {LogInDialogComponent} from "./log-in-dialog/log-in-dialog.component";
 import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialog.component";
 
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
+import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-portfolio.component";
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
         StartseitenDialogComponent,
 
         LogOffDialogComponent,
+        CreatePortfolioDialogComponent,
 
     ],
     imports: [
