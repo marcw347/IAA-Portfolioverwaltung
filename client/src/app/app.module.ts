@@ -15,6 +15,7 @@ import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialo
 
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-portfolio.component";
+import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.component";
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-p
 
         LogOffDialogComponent,
         CreatePortfolioDialogComponent,
+        BuyStockDialogComponent,
 
     ],
     imports: [
