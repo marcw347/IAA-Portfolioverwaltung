@@ -16,6 +16,8 @@ import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialo
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-portfolio.component";
 import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.component";
+import {SellStockDialogComponent} from "./sell-stock-dialog/sell-stock-dialog.component";
+import {MoveStockDialogComponent} from "./move-stock-dialog/move-stock-dialog.component";
 
 
 @NgModule({
@@ -31,6 +33,9 @@ import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.compo
         LogOffDialogComponent,
         CreatePortfolioDialogComponent,
         BuyStockDialogComponent,
+        SellStockDialogComponent,
+        MoveStockDialogComponent,
+
 
     ],
     imports: [
