@@ -11,7 +11,7 @@ import { RegistrationDialogComponent} from "./registration-dialog/registration-d
 
 import {LogInDialogComponent} from "./log-in-dialog/log-in-dialog.component";
 
-import {MenuComponent} from "./menu/menu.component";
+import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialog.component";
 
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 
@@ -24,7 +24,7 @@ import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 
         LogInDialogComponent,
 
-        MenuComponent,
+        StartseitenDialogComponent,
 
         LogOffDialogComponent,
 
