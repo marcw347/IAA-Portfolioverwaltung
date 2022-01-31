@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {CreatePortfolioComponent} from './create-portfolio/create-portfolio.component';
 import {ErrorInterceptor} from './helpers/error.interceptor';
 import {fakeBackendProvider} from './helpers/fake-backend';
 import {JwtInterceptor} from './helpers/jwt.interceptor';
@@ -16,7 +17,7 @@ import {LoginComponent} from './login/login.component';
 import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialog.component";
 
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
-import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-portfolio.component";
+
 import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.component";
 import {SellStockDialogComponent} from "./sell-stock-dialog/sell-stock-dialog.component";
 import {MoveStockDialogComponent} from "./move-stock-dialog/move-stock-dialog.component";
@@ -37,7 +38,7 @@ import { AlertComponent } from './alert/alert.component';
         StartseitenDialogComponent,
 
         LogOffDialogComponent,
-        CreatePortfolioDialogComponent,
+        CreatePortfolioComponent,
         BuyStockDialogComponent,
         SellStockDialogComponent,
         MoveStockDialogComponent,
