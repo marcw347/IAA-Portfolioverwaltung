@@ -5,6 +5,6 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
     templateUrl: './create-portfolio.component.html',
     styleUrls: ['./create-portfolio.component.css']
 })
-export class CreatePortfolioDialogComponent{
+export class CreatePortfolioComponent{
 
 }
