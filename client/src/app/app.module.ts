@@ -1,22 +1,17 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {routing} from './app.routing';
-import {AuthGuard} from './guards/auth.guard';
 import {ErrorInterceptor} from './helpers/error.interceptor';
+import {fakeBackendProvider} from './helpers/fake-backend';
 import {JwtInterceptor} from './helpers/jwt.interceptor';
+import {LoginComponent} from './login/login.component';
 
 
-import { RegistrationDialogComponent} from "./registration-dialog/registration-dialog.component";
-
-import {LogInDialogComponent} from "./log-in-dialog/log-in-dialog.component";
-import {AlertService} from './services/alert.service';
-import {AuthenticationService} from './services/authentication.service';
-import {UserService} from './services/user.service';
 
 import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialog.component";
 
@@ -25,17 +20,19 @@ import {CreatePortfolioDialogComponent} from "./create-portfolio-dialog/create-p
 import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.component";
 import {SellStockDialogComponent} from "./sell-stock-dialog/sell-stock-dialog.component";
 import {MoveStockDialogComponent} from "./move-stock-dialog/move-stock-dialog.component";
-import { ManagementComponent } from './management/management/management.component';
-import { AlertComponent } from './directives/alert/alert.component';
+
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
 
-        RegistrationDialogComponent,
+        RegisterComponent,
 
-        LogInDialogComponent,
+        LoginComponent,
 
         StartseitenDialogComponent,
 
@@ -44,7 +41,8 @@ import { AlertComponent } from './directives/alert/alert.component';
         BuyStockDialogComponent,
         SellStockDialogComponent,
         MoveStockDialogComponent,
-        ManagementComponent,
+        RegisterComponent,
+        HomeComponent,
         AlertComponent,
 
 
@@ -53,18 +51,16 @@ import { AlertComponent } from './directives/alert/alert.component';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        BrowserModule,
-        ReactiveFormsModule,
-        routing
+        AppRoutingModule,
+        ReactiveFormsModule
     ],
     providers: [
-        AuthGuard,
-        AlertService,
-        AuthenticationService,
-        UserService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },],
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        // provider used to create fake backend
+        fakeBackendProvider
+    ],
     bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { };
