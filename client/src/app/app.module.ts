@@ -13,18 +13,17 @@ import {JwtInterceptor} from './helpers/jwt.interceptor';
 import {LoginComponent} from './login/login.component';
 
 
-
 import {StartseitenDialogComponent} from "./startseiten-dialog/startseiten-dialog.component";
 
 import {LogOffDialogComponent} from "./log-off-dialog/log-off-dialog.component";
 
-import {BuyStockDialogComponent} from "./buy-stock-dialog/buy-stock-dialog.component";
+import {BuyStockComponent} from "./buy-stock/buy-stock.component";
 import {SellStockDialogComponent} from "./sell-stock-dialog/sell-stock-dialog.component";
 import {MoveStockDialogComponent} from "./move-stock-dialog/move-stock-dialog.component";
 
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { AlertComponent } from './alert/alert.component';
+import {RegisterComponent} from './register/register.component';
+import {HomeComponent} from './home/home.component';
+import {AlertComponent} from './alert/alert.component';
 
 
 @NgModule({
@@ -39,9 +38,8 @@ import { AlertComponent } from './alert/alert.component';
 
         LogOffDialogComponent,
         CreatePortfolioComponent,
-        BuyStockDialogComponent,
-        SellStockDialogComponent,
-        MoveStockDialogComponent,
+        BuyStockComponent,
+
         RegisterComponent,
         HomeComponent,
         AlertComponent,
@@ -56,12 +54,13 @@ import { AlertComponent } from './alert/alert.component';
         ReactiveFormsModule
     ],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+        {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
 
         // provider used to create fake backend
         fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule { };
+export class AppModule {
+};
