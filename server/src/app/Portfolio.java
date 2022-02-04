@@ -78,6 +78,11 @@ public class Portfolio  {
         this.arrayOfStocks = arrayOfStocks;
     }
 
+    @Override
+    public String toString(){
+        return this.namePortfolio;
+    }
+
 
 
 

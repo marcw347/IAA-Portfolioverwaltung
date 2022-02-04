@@ -18,14 +18,40 @@ public class Portfolioübersicht {
         arrayOfPortfolios.add(new Portfolio(name));
 
     }else{
-            System.out.println("Doppelte Namen von Portfolios sind nicht zulässig");
+            System.out.println("Doppelte Namen von Portfolios sind nicht zulässig.");
         }
     }
 
     public void deletePortfolio(String name) {
-        int indexNumber = findPositionByName(name);
 
-    }
+        //check ob noch Positionen drin sind
+        //löschen
+        int keinDelete = 0;
+        int indexNumberPortfolio = findPositionByName(name);
+        int size = getArrayOfPortfolios().get(indexNumberPortfolio).getArrayOfStocks().size();
+        if(size == 0){
+            getArrayOfPortfolios().remove(indexNumberPortfolio);
+            System.out.println(name + "wurde gelöscht");
+        } else {
+
+            for (int i = 0; i < size; i++) {
+                if (getArrayOfPortfolios().get(indexNumberPortfolio).getArrayOfStocks().get(i).getStueckzahlPortfolio() > 0) {
+
+                    System.out.println(name+" kann nicht gelöscht werden, es befinden sich noch Positionen im Portfolio.");
+                    keinDelete = 1;
+                    break;
+                }
+
+
+            }
+            if (keinDelete<1) {
+                getArrayOfPortfolios().remove(indexNumberPortfolio);
+                System.out.println(name + "wurde gelöscht");
+            }
+        }
+        }
+
+
 
 
     public int findPositionByName(String name) {
@@ -58,10 +84,9 @@ public class Portfolioübersicht {
                             getArrayOfPortfolios().get(indexUrsprungPortfolio).getArrayOfStocks().get(indexUrsprungStock).getStueckzahlPortfolio());
             getArrayOfPortfolios().get(indexUrsprungPortfolio).sellStock(WKN,stueckzahl);
 
-            //ursprungPortfolio.
-            //Check ist drüben schon was da
-            //Falls was da ist hinzufügen
-            //ansonsten neue Position eröffnen
+
+        }else{
+            System.out.println("Die Aktie ist nicht und nur in zu geringem Maße im Ursprungsportfolio vorhanden.");
         }
     }
 }
